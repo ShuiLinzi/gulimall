@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.shui.gulimall</groupId>
+    <artifactId>gulimall</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>gulimall</name>
+    <description>Demo project for Spring Boot</description>
+    <packaging>pom</packaging>
+    <modules>
+        <module>guli-coupon</module>
+        <module>guli-member</module>
+        <module>guli-order</module>
+        <module>guli-product</module>
+        <module>guli-ware</module>
+        <module>renren-fast</module>
+        <module>renren-generator</module>
+        <module>guli-common</module>
+        <module>guli-common2</module>
+        <module>guli-gateway</module>
+        <module>gulimall-third-party</module>
+        <module>guli-search</module>
+    </modules>
+</project>
