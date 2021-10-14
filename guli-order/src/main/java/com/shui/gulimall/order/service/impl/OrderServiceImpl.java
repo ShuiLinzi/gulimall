@@ -1,5 +1,6 @@
 package com.shui.gulimall.order.service.impl;
 
+import com.shui.gulimall.order.vo.OrderConfirmVo;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;
@@ -26,6 +27,13 @@ public class OrderServiceImpl extends ServiceImpl<OrderDao, OrderEntity> impleme
         );
 
         return new PageUtils(page);
+    }
+
+    @Override
+    public OrderConfirmVo confirmOrber() {
+        OrderConfirmVo confirmVo = new OrderConfirmVo();
+
+        return confirmVo;
     }
 
 }

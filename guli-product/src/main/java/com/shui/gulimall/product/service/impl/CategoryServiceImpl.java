@@ -1,6 +1,8 @@
 package com.shui.gulimall.product.service.impl;
 
+import com.shui.gulimall.product.vo.Catalogs2Vo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import java.awt.*;
@@ -24,6 +26,8 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
 
     @Autowired
     CategoryBrandRelationServiceImpl categoryBrandRelationService;
+    @Autowired
+    RedisTemplate redisTemplate;
 
     @Override
     public PageUtils queryPage(Map<String, Object> params) {
@@ -85,4 +89,15 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
         }).collect(Collectors.toList());
         return children;
     }
+
+//    public Map<String,List<Catalogs2Vo>> getCatalogJson(){
+//        //给缓存中放json字符串，拿出来的时候也是字符串，这样可以保持格式的统一【序列化和反序列化】
+//        /**
+//         * 空结果缓存，解决缓存穿透
+//         * 设置过期时间，加随机值，解决缓存雪崩
+//         * 加锁，解决缓存击穿
+//         */
+//
+//
+//    }
 }
